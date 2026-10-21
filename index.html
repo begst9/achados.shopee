@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════╗
+  ║  COMO USAR (bem facilinho, passo a passo)    ║
+  ╚══════════════════════════════════════════════╝
+  1) Procure o desenho ★ nos comentários. Onde tem ★, é lugar de mexer.
+  2) Cada link é uma linha que começa com <li><a href="...">
+  3) Para TROCAR um link: apague só o que está entre as aspas depois de href=
+     e cole o seu link novo no lugar. Não apague as aspas "".
+  4) Para ADICIONAR um produto: copie uma linha <li>...</li> inteira,
+     cole embaixo dela e troque o link e o nome.
+  5) Para APAGAR um produto: apague a linha <li>...</li> inteira.
+  6) Para mudar o NOME na tela: troque o texto que fica entre > e </a>
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!-- Deixa o site bonito no celular e permite dar zoom (importante para acessibilidade) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ★ Este é o título que aparece na aba do navegador -->
+  <title>Vício em Comprar – Achadinhos da Shopee</title>
+
+  <style>
+    /* ===== CORES: se quiser mudar, troque só aqui ===== */
+    :root { --laranja:#c2341a; --escuro:#2a1511; --suave:#fff1ec; }
+
+    * { box-sizing: border-box; }
+
+    /* Letra grande e fácil de ler; o fundo é laranja */
+    body { margin:0; background:var(--laranja); color:var(--escuro);
+           font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+           font-size:1.125rem; line-height:1.5; }
+
+    /* Deixa tudo no meio da tela, sem ficar largo demais */
+    main { max-width:30rem; margin:0 auto; padding:2rem 1rem; }
+
+    /* Textos em cima do fundo laranja ficam brancos */
+    header, footer, h2 { color:#fff; }
+    header, footer { text-align:center; }
+    h1 { font-size:1.75rem; margin:.5rem 0 0; }
+    h2 { font-size:1.25rem; margin:1.5rem 0 .5rem; }
+    footer { font-size:.95rem; margin-top:2rem; }
+
+    /* A bolinha com o desenho no topo */
+    .foto { width:5rem; height:5rem; margin:0 auto; border-radius:50%;
+            background:#fff; display:grid; place-items:center; font-size:3rem; }
+
+    /* Listas sem bolinhas, com espaço entre os botões */
+    ul { list-style:none; margin:0; padding:0; display:grid; gap:.5rem; }
+
+    /* Os botões de link: grandes para o dedo (mínimo 3rem de altura) */
+    a { display:flex; align-items:center; gap:.75rem; min-height:3rem;
+        padding:.5rem 1rem; background:#fff; color:var(--escuro);
+        font-weight:600; text-decoration:none; border-radius:1rem; }
+    a:hover { background:var(--suave); }
+
+    /* Linha preta forte mostra onde você está quando usa o teclado */
+    a:focus-visible, summary:focus-visible { outline:4px solid #000; outline-offset:2px; }
+
+    /* As caixinhas que abrem e fecham */
+    details { background:#fff; border-radius:1rem; padding:.25rem .75rem .75rem; margin-bottom:.75rem; }
+    summary { min-height:3rem; display:flex; align-items:center; gap:.5rem;
+              font-weight:800; cursor:pointer; }
+    details a { background:var(--suave); }
+  </style>
+</head>
+
+<body>
+<main>
+
+  <!-- ===== TOPO: foto, nome e frase ===== -->
+  <header>
+    <!-- aria-hidden = o leitor de tela não lê o desenho (ele não ajuda) -->
+    <div class="foto" aria-hidden="true">🛍️</div>
+    <!-- ★ Troque o nome aqui -->
+    <h1>Vício em Comprar</h1>
+    <!-- ★ Troque o @ do Instagram aqui -->
+    <p>@vicioemcomprar1</p>
+    <!-- ★ Troque a frase aqui -->
+    <p>Achadinhos da Shopee com preço bom. Escolha um assunto e toque no produto.</p>
+  </header>
+
+  <!-- ===== PARTE 1: OS ASSUNTOS (cada link leva para uma categoria da Shopee) ===== -->
+  <nav aria-labelledby="t-cat">
+    <h2 id="t-cat">Categorias</h2>
+    <ul>
+      <!-- ★ Cole seu link de afiliado entre as aspas depois de href= -->
+      <li><a href="https://s.shopee.com.br/7KxntuUlaH" rel="sponsored"><span aria-hidden="true">🎮</span> Games e consoles</a></li>
+      <li><a href="https://s.shopee.com.br/2BFhlCuu13" rel="sponsored"><span aria-hidden="true">🕹️</span> Mais games e consoles</a></li>
+      <li><a href="https://s.shopee.com.br/7faeJHwq7o" rel="sponsored"><span aria-hidden="true">🎧</span> Áudio</a></li>
+      <li><a href="https://s.shopee.com.br/2BFhlE3EF4" rel="sponsored"><span aria-hidden="true">💻</span> Computadores e acessórios</a></li>
+      <li><a href="https://s.shopee.com.br/1BDB6jyoM" rel="sponsored"><span aria-hidden="true">👕</span> Roupas masculinas</a></li>
+      <li><a href="https://s.shopee.com.br/6AlqWULIAE" rel="sponsored"><span aria-hidden="true">👟</span> Calçados masculinos</a></li>
+      <li><a href="https://s.shopee.com.br/70KxW2ze0w" rel="sponsored"><span aria-hidden="true">🎒</span> Bolsas masculinas</a></li>
+      <li><a href="https://s.shopee.com.br/5LCjWw7PI8" rel="sponsored"><span aria-hidden="true">👜</span> Bolsas femininas</a></li>
+      <li><a href="https://s.shopee.com.br/2qVOYTQp4y" rel="sponsored"><span aria-hidden="true">🧸</span> Brinquedos e hobbies</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PARTE 2: OS PRODUTOS, UMA CAIXINHA PARA CADA ASSUNTO ===== -->
+  <h2>Produtos</h2>
+
+  <!-- CAIXINHA 1: Roupas masculinas. A palavra "open" deixa ela aberta; apague "open" para vir fechada -->
+  <details open>
+    <summary><span aria-hidden="true">👕</span> Roupas masculinas</summary>
+    <ul>
+      <!-- ★ Cada linha <li> é um produto. Troque o link e o nome. -->
+      <li><a href="https://s.shopee.com.br/7famIdG53Z" rel="sponsored">Roupa masculina – Cueca Box Algodão</a></li>
+      <li><a href="https://s.shopee.com.br/30owk9I9bw" rel="sponsored">Roupa masculina – Short Tactel </a></li>
+      <li><a href="https://s.shopee.com.br/7AeVhrroCH" rel="sponsored">Roupa masculina – Kit 2 Short Tactel</a></li>
+      <li><a href="https://s.shopee.com.br/5VWHir5oHC" rel="sponsored">Roupa masculina – Camiseta Lisa Simples </a></li>
+      <li><a href="https://s.shopee.com.br/113sMd8ScL" rel="sponsored">Roupa masculina – Cueca Boxer GlareBan</a></li>
+      <li><a href="https://s.shopee.com.br/6fiF7C0v8L" rel="sponsored">Roupa masculina – Camisa Fusca Algodão</a></li>
+      <li><a href="https://s.shopee.com.br/7KxvuZLDIh" rel="sponsored">Roupa masculina –  Camisa Sagrada Família</a></li>
+      <li><a href="https://s.shopee.com.br/7puCVWRAEk" rel="sponsored">Roupa masculina – Camisa Estampada Supra</a></li>
+      <li><a href="https://s.shopee.com.br/7AeViNEU2R" rel="sponsored">Roupa masculina – Camisa Paris Torres</a></li>
+      <li><a href="https://s.shopee.com.br/9pfGtMbRP6" rel="sponsored">Roupa masculina – Camisa Paris Dream</a></li>
+      <li><a href="https://s.shopee.com.br/qkSArZMWP" rel="sponsored">Roupa masculina – Camisa Made in Italy </a></li>
+      <li><a href="https://s.shopee.com.br/4VdkXekewg" rel="sponsored">Roupa masculina – Camisa Fé</a></li>
+      <li><a href="https://s.shopee.com.br/gR1ydtyXQ" rel="sponsored">Roupa masculina – Camisa Cruz Urbana</a></li>
+      <li><a href="https://s.shopee.com.br/9pfGtVyPX6" rel="sponsored">Roupa masculina – Camisa One</a></li>
+      <li><a href="https://s.shopee.com.br/1qczMqAOIZ" rel="sponsored">Roupa masculina – Camisa Unissex São Bento</a></li>
+      <li><a href="https://s.shopee.com.br/W7bmRVmiR" rel="sponsored">Roupa masculina – Camisa "Sempre foi Deus"</a></li>
+      <li><a href="https://s.shopee.com.br/9APa6PfyqL" rel="sponsored">Roupa masculina – Camisa "Ele Vive"</a></li>
+      <li><a href="https://s.shopee.com.br/4B0u9H6XAh" rel="sponsored">Roupa masculina – Camisa Urso</a></li>
+      <li><a href="https://s.shopee.com.br/2qVWYsWObL" rel="sponsored">Roupa masculina –  Kit 12 Meias Infantis</a></li>
+    </ul>
+  </details>
+
+  <!-- CAIXINHA 2: Brinquedos e hobbies -->
+  <details>
+    <summary><span aria-hidden="true">🧸</span> Brinquedos e hobbies</summary>
+    <ul>
+      <li><a href="https://s.shopee.com.br/LoBaeWpXa" rel="sponsored">Brinquedo – DVD "Os Smurfs-Smurfette"</a></li>
+      <li><a href="https://s.shopee.com.br/4qGax18sK0" rel="sponsored">Brinquedo – DVD ACDC Especial</a></li>
+      <li><a href="https://s.shopee.com.br/2gC6N6OJ31" rel="sponsored">Brinquedo – DVD Especial Metallica</a></li>
+      <li><a href="https://s.shopee.com.br/AUuxhZ5vq6" rel="sponsored">Brinquedo – Caixa Misteriosa Antistresse</a></li>
+      <li><a href="https://s.shopee.com.br/5q9891wDxH" rel="sponsored">Brinquedo – Peido Pum Pegadinha</a></li>
+      <li><a href="https://s.shopee.com.br/40hTxhJmxQ" rel="sponsored">Brinquedo – Peão Giroscópio Led</a></li>
+      <li><a href="https://s.shopee.com.br/3VlDMqtH3N" rel="sponsored">Brinquedo – Caixa de Uno Completo</a></li>
+      <li><a href="https://s.shopee.com.br/9zyh6qTWVC" rel="sponsored">Brinquedo – Hot Wheels Ferrari-5 Unidades Sortidas </a></li>
+      
+    </ul>
+  </details>
+
+  <!-- CAIXINHA 3: Calçados masculinos -->
+  <details>
+    <summary><span aria-hidden="true">👟</span> Calçados masculinos</summary>
+    <ul>
+      <li><a href="https://s.shopee.com.br/3qO3m1DT9j" rel="sponsored">Calçado Masculino –  Chinelo Slide</a></li>
+      <li><a href="https://s.shopee.com.br/50a1AQOZ1j" rel="sponsored">Calçado Masculino – Palmilha Gel Confortável </a></li>
+      <li><a href="https://s.shopee.com.br/1BLDJ6aM2" rel="sponsored">Calçado Masculino –  Chinelo Antiderrapante</a></li>
+      <li><a href="https://s.shopee.com.br/4B0uB2xMkE" rel="sponsored">Calçado Masculino – Chinelo Slide Nuvem </a></li>
+      <li><a href="https://s.shopee.com.br/2qVWaboq4a" rel="sponsored">Calçado Masculino –  Bota Coturno Adventure</a></li>
+      <li><a href="https://s.shopee.com.br/4fxAlzhO08" rel="sponsored">Calçado Masculino – Havaianas Brasil Preto e Branco Kit </a></li>
+      <li><a href="https://s.shopee.com.br/9069w13H8e" rel="sponsored">Calçado Masculino –  Cadarço de Tenis Chato</a></li>
+      <li><a href="https://s.shopee.com.br/2VsgCBlKRs" rel="sponsored">Calçado Masculino – Mocassim Beje </a></li>
+    </ul>
+  </details>
+
+  <!-- CAIXINHA 4: Games e consoles -->
+  <details>
+    <summary><span aria-hidden="true">🎮</span> Games e consoles</summary>
+    <ul>
+      <li><a href="https://s.shopee.com.br/8pmjk9oCQG" rel="sponsored">Games – Controle Gamer Bluetooth</a></li>
+      <li><a href="https://s.shopee.com.br/1LgioTIrky" rel="sponsored">Games – Suporte Controle Spider-Man</a></li>
+      <li><a href="https://s.shopee.com.br/LoBceM8EO" rel="sponsored">Games – Suporte Controle Pokebola</a></li>
+     <li><a href="https://s.shopee.com.br/1BNIcEqwbK" rel="sponsored">Games – Memory Card 8mb</a></li>
+     <li><a href="https://s.shopee.com.br/9Kj0LIl6qC" rel="sponsored">Games – Controle de Xbox 360</a></li>
+     <li><a href="https://s.shopee.com.br/qkSDh3vz1" rel="sponsored">Games – Console Portátil Retro</a></li>
+     <li><a href="https://s.shopee.com.br/2gC6P6Qwdn" rel="sponsored">Games – Controle Nintendo Switch Yoshi</a></li>
+    </ul>
+  </details>
+
+  <!-- CAIXINHA 5: Áudio -->
+  <details>
+    <summary><span aria-hidden="true">🎧</span> Áudio</summary>
+    <ul>
+      <li><a href="https://s.shopee.com.br/8AX2xPA1kH" rel="sponsored">Áudio – AirPods Conector Tipo-C</a></li>
+      <li><a href="https://s.shopee.com.br/80Dcl9MVma" rel="sponsored">Áudio – Alexa5 Nova Geração</a></li>
+      <li><a href="https://s.shopee.com.br/9pfGwYNf6B" rel="sponsored">Áudio – Fone Sem-Fio X55</a></li>
+      <li><a href="https://s.shopee.com.br/5AtRO2DLPC" rel="sponsored">Áudio – Fone Xiaomi Bluetooth</a></li>
+      <li><a href="https://s.shopee.com.br/gR21pOWoS" rel="sponsored">Áudio – Microfone Boya Completo</a></li>
+    </ul>
+  </details>
+
+  <!-- ===== RODAPÉ: aviso de afiliado (é importante manter) ===== -->
+  <footer>
+    <!-- ★ Troque o link do seu Instagram aqui -->
+    <p><a href="https://instagram.com/vicioemcomprar1">Siga no Instagram</a></p>
+    <p>Links de afiliado: posso receber uma pequena comissão se você comprar, sem pagar nada a mais por isso. Preços e estoque podem mudar na Shopee.</p>
+  </footer>
+
+</main>
+</body>
+</html>
